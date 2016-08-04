@@ -9,7 +9,7 @@
 		<string>hcl</string>
 	</array>
 	<key>name</key>
-	<string>Terraform</string>
+	<string>HCL</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -20,7 +20,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.terraform</string>
+					<string>punctuation.definition.comment.hcl</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -28,7 +28,7 @@
 			<key>end</key>
 			<string>$\n?</string>
 			<key>name</key>
-			<string>comment.line.number-sign.terraform</string>
+			<string>comment.line.number-sign.hcl</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -38,7 +38,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.terraform</string>
+					<string>punctuation.definition.comment.hcl</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -46,7 +46,7 @@
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
-			<string>comment.block.terraform</string>
+			<string>comment.block.hcl</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -54,7 +54,7 @@
 			<key>match</key>
 			<string>\b(true|false|yes|no|on|off)\b</string>
 			<key>name</key>
-			<string>constant.language.terraform</string>
+			<string>constant.language.hcl</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -62,7 +62,7 @@
 			<key>match</key>
 			<string>\b([0-9]+)([kKmMgG]b?)?\b</string>
 			<key>name</key>
-			<string>constant.numeric.terraform</string>
+			<string>constant.numeric.hcl</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -70,7 +70,7 @@
 			<key>match</key>
 			<string>\b(0x[0-9A-Fa-f]+)([kKmMgG]b?)?\b</string>
 			<key>name</key>
-			<string>constant.numeric.terraform</string>
+			<string>constant.numeric.hcl</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -78,48 +78,48 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.function.terraform</string>
+					<string>storage.type.function.hcl</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.begin.terraform</string>
+					<string>string.hcl punctuation.definition.string.begin.hcl</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>string.value.terraform</string>
+					<string>string.value.hcl</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.end.terraform</string>
+					<string>string.hcl punctuation.definition.string.end.hcl</string>
 				</dict>
 				<key>5</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.begin.terraform</string>
+					<string>string.hcl punctuation.definition.string.begin.hcl</string>
 				</dict>
 				<key>6</key>
 				<dict>
 					<key>name</key>
-					<string>string.value.terraform</string>
+					<string>string.value.hcl</string>
 				</dict>
 				<key>7</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.end.terraform</string>
+					<string>string.hcl punctuation.definition.string.end.hcl</string>
 				</dict>
 				<key>8</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.tag.terraform</string>
+					<string>punctuation.definition.tag.hcl</string>
 				</dict>
 			</dict>
 			<key>match</key>
 			<string>(resource)\s+(")(\w+)(")\s+(")([\w-]+)(")\s+({)</string>
 			<key>name</key>
-			<string>meta.resource.terraform</string>
+			<string>meta.resource.hcl</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -127,27 +127,27 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.function.terraform</string>
+					<string>storage.type.function.hcl</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.begin.terraform</string>
+					<string>string.hcl punctuation.definition.string.begin.hcl</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>string.value.terraform</string>
+					<string>string.value.hcl</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.end.terraform</string>
+					<string>string.hcl punctuation.definition.string.end.hcl</string>
 				</dict>
 				<key>5</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.tag.terraform</string>
+					<string>punctuation.definition.tag.hcl</string>
 				</dict>
 			</dict>
 			<key>match</key>
@@ -159,12 +159,12 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>variable.assignment.terraform</string>
+					<string>variable.assignment.hcl</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.terraform</string>
+					<string>keyword.operator.hcl</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -178,22 +178,22 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.quote.double.terraform</string>
+					<string>punctuation.quote.double.hcl</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>variable.assignment.terraform</string>
+					<string>variable.assignment.hcl</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.quote.double.terraform</string>
+					<string>punctuation.quote.double.hcl</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.terraform</string>
+					<string>keyword.operator.hcl</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -207,12 +207,12 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.section.terraform</string>
+					<string>entity.name.section.hcl</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.tag.terraform</string>
+					<string>punctuation.definition.tag.hcl</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -228,7 +228,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.begin.terraform</string>
+					<string>string.hcl punctuation.definition.string.begin.hcl</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -240,15 +240,15 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>string.terraform punctuation.definition.string.end.terraform</string>
+					<string>string.hcl punctuation.definition.string.end.hcl</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.double.terraform</string>
+			<string>string.quoted.double.hcl</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.terraform</string>
+	<string>source.hcl</string>
 	<key>uuid</key>
 	<string>9060ca81-906d-4f19-a91a-159f4eb119d6</string>
 </dict>

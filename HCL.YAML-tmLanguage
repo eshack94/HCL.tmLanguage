@@ -1,0 +1,81 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: HCL
+scopeName: source.hcl
+fileTypes: [tf, tfvars]
+uuid: 9060ca81-906d-4f19-a91a-159f4eb119d6
+
+patterns:
+- comment: Comments
+  name: comment.line.number-sign.hcl
+  begin: '#'
+  end: $\n?
+  captures:
+    '0': {name: punctuation.definition.comment.hcl}
+
+- comment: Block comments
+  name: comment.block.hcl
+  begin: /\*
+  end: \*/
+  captures:
+    '0': {name: punctuation.definition.comment.hcl}
+
+- comment: Language constants (true, false, yes, no, on, off)
+  name: constant.language.hcl
+  match: \b(true|false|yes|no|on|off)\b
+
+- comment: Numbers
+  name: constant.numeric.hcl
+  match: \b([0-9]+)([kKmMgG]b?)?\b
+
+- comment: Hex numbers
+  name: constant.numeric.hcl
+  match: \b(0x[0-9A-Fa-f]+)([kKmMgG]b?)?\b
+
+- name: meta.resource.hcl
+  match: (resource)\s+(")(\w+)(")\s+(")([\w-]+)(")\s+({)
+  captures:
+    '1': {name: storage.type.function.hcl}
+    '2': {name: string.hcl punctuation.definition.string.begin.hcl}
+    '3': {name: string.value.hcl}
+    '4': {name: string.hcl punctuation.definition.string.end.hcl}
+    '5': {name: string.hcl punctuation.definition.string.begin.hcl}
+    '6': {name: string.value.hcl}
+    '7': {name: string.hcl punctuation.definition.string.end.hcl}
+    '8': {name: punctuation.definition.tag.hcl}
+
+- match: (provider|provisioner|variable|output|module|atlas)\s+(")([\w-]+)(")\s+({)
+  captures:
+    '1': {name: storage.type.function.hcl}
+    '2': {name: string.hcl punctuation.definition.string.begin.hcl}
+    '3': {name: string.value.hcl}
+    '4': {name: string.hcl punctuation.definition.string.end.hcl}
+    '5': {name: punctuation.definition.tag.hcl}
+
+- comment: Value assignments (left hand side not in double quotes)
+  match: ([\w_-]+)\s*(=)\s*
+  captures:
+    '1': {name: variable.assignment.hcl}
+    '2': {name: keyword.operator.hcl}
+
+- comment: Value assignments (left hand side in double quotes)
+  match: (")([\w_-]+)(")\s*(=)\s*
+  captures:
+    '1': {name: punctuation.quote.double.hcl}
+    '2': {name: variable.assignment.hcl}
+    '3': {name: punctuation.quote.double.hcl}
+    '4': {name: keyword.operator.hcl}
+
+- comment: Maps
+  match: ([\w\-_]+)\s+({)
+  captures:
+    '1': {name: entity.name.section.hcl}
+    '2': {name: punctuation.definition.tag.hcl}
+
+- comment: Strings
+  name: string.quoted.double.hcl
+  begin: \"
+  beginCaptures:
+    '0': {name: string.hcl punctuation.definition.string.begin.hcl}
+  end: \"
+  endCaptures:
+    '0': {name: string.hcl punctuation.definition.string.end.hcl}

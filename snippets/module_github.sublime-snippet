@@ -6,6 +6,6 @@ module "${1:name}" {
 }
 ]]></content>
 	<tabTrigger>moduleG</tabTrigger>
-	<scope>source.terraform</scope>
+	<scope>source.hcl</scope>
 	<description>module (github public)</description>
 </snippet>

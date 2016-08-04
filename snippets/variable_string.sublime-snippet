@@ -7,6 +7,6 @@ variable "${1:name}" {
 }
 ]]></content>
 	<tabTrigger>variableS</tabTrigger>
-	<scope>source.terraform</scope>
+	<scope>source.hcl</scope>
 	<description>variable (string)</description>
 </snippet>

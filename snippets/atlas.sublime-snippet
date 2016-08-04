@@ -5,6 +5,6 @@ atlas {
 }
 ]]></content>
 	<tabTrigger>atlas</tabTrigger>
-	<scope>source.terraform</scope>
+	<scope>source.hcl</scope>
 	<description>atlas block</description>
 </snippet>

@@ -10,6 +10,6 @@ variable "${1:name}" {
 }
 ]]></content>
 	<tabTrigger>variableM</tabTrigger>
-	<scope>source.terraform</scope>
+	<scope>source.hcl</scope>
 	<description>variable (map)</description>
 </snippet>
